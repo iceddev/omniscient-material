@@ -1,0 +1,35 @@
+{
+  "name": "omniscient-material",
+  "version": "0.0.0",
+  "description": "Material UI elements built with Omniscient",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -cv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iceddev/omniscient-material.git"
+  },
+  "keywords": [
+    "material",
+    "react",
+    "omniscient",
+    "immutable"
+  ],
+  "author": "Iceddev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iceddev/omniscient-material/issues"
+  },
+  "homepage": "https://github.com/iceddev/omniscient-material",
+  "devDependencies": {
+    "code": "^1.3.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "lab": "^5.2.1"
+  },
+  "dependencies": {
+    "omniscient": "^3.0.1",
+    "react": "^0.12.2"
+  }
+}
