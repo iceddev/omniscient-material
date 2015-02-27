@@ -62,7 +62,7 @@ module.exports = component(mixins, function CoreDrawerPanel(props){
         drawer
       )
     ),
-    React.createElement(Mq, { minWidth: maxWidth, className: classes.host },
+    React.createElement(Mq, { minWidth: maxWidth + 1, className: classes.host },
       React.createElement('div', { key: 'main', className: mainClasses, onClick: main.props.onClick },
         main,
         React.createElement('div', { id: 'scrim', key: 'scrim', className: classes.scrim })
