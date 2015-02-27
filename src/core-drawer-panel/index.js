@@ -52,13 +52,24 @@ module.exports = component(mixins, function CoreDrawerPanel(props){
 
   var classes = this.sheet.classes;
 
-  return React.createElement(Mq, { maxWidth: maxWidth, className: classes.host },
-    React.createElement('div', { key: 'main', className: mainClasses, onClick: main.props.onClick },
-      main,
-      React.createElement('div', { id: 'scrim', key: 'scrim', className: classes.scrim })
+  return React.createElement('div', null,
+    React.createElement(Mq, { maxWidth: maxWidth, className: classes.host },
+      React.createElement('div', { key: 'main', className: mainClasses, onClick: main.props.onClick },
+        main,
+        React.createElement('div', { id: 'scrim', key: 'scrim', className: classes.scrim })
+      ),
+      React.createElement('div', { key: 'drawer', style: drawerStyles, className: drawerClasses },
+        drawer
+      )
     ),
-    React.createElement('div', { key: 'drawer', style: drawerStyles, className: drawerClasses },
-      drawer
+    React.createElement(Mq, { minWidth: maxWidth, className: classes.host },
+      React.createElement('div', { key: 'main', className: mainClasses, onClick: main.props.onClick },
+        main,
+        React.createElement('div', { id: 'scrim', key: 'scrim', className: classes.scrim })
+      ),
+      React.createElement('div', { key: 'drawer', style: drawerStyles, className: classes.drawer },
+        drawer
+      )
     )
   );
 });
