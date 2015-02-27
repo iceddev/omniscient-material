@@ -52,13 +52,13 @@ module.exports = component(mixins, function CoreDrawerPanel(props){
 
   var classes = this.sheet.classes;
 
-  return React.createElement(Mq, { maxWidth: maxWidth, className: classes.host }, [
-    React.createElement('div', { className: mainClasses, onClick: main.props.onClick }, [
+  return React.createElement(Mq, { maxWidth: maxWidth, className: classes.host },
+    React.createElement('div', { key: 'main', className: mainClasses, onClick: main.props.onClick },
       main,
-      React.createElement('div', { className: classes.scrim })
-    ]),
-    React.createElement('div', { style: drawerStyles, className: drawerClasses }, [
+      React.createElement('div', { id: 'scrim', key: 'scrim', className: classes.scrim })
+    ),
+    React.createElement('div', { key: 'drawer', style: drawerStyles, className: drawerClasses },
       drawer
-    ])
-  ]);
+    )
+  );
 });
